@@ -1,0 +1,18 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  padding: 0.5rem;
+  background-color: lightgray;
+}

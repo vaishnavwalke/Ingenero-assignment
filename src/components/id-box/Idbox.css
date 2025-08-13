@@ -1,0 +1,14 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.selected {
+  background-color: red;
+  border: 1px dotted black;
+  color: white;
+}

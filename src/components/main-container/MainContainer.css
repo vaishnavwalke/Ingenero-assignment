@@ -1,0 +1,10 @@
+.dashboard{
+    display:flex;
+
+}
+.selected-id{
+    display:flex;
+    align-items:flex-start;
+    background-color:lightgray;
+    padding:
+}
