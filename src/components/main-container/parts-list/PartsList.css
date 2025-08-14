@@ -1,8 +1,9 @@
 .part-list {
   display: flex;
   flex-direction: column;
-  /* width: 30%; */
+  width: 30%;
   gap: 16px;
+  padding: 8px;
 }
 
 .heading {
@@ -24,4 +25,8 @@
 .list {
   display: flex;
   gap: 8px;
+}
+
+.checkbox {
+  accent-color: red;
 }
