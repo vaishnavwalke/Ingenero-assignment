@@ -1,0 +1,12 @@
+.disassembly-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  background-color: white;
+}
+
+.text {
+  background-color: lightgray;
+  padding: 4px;
+}

@@ -1,0 +1,27 @@
+.part-list {
+  display: flex;
+  flex-direction: column;
+  /* width: 30%; */
+  gap: 16px;
+}
+
+.heading {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+.gap {
+  display: flex;
+  gap: 3rem;
+}
+.part-data {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.list {
+  display: flex;
+  gap: 8px;
+}

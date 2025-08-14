@@ -1,10 +1,17 @@
-.dashboard{
-    display:flex;
-
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-.selected-id{
-    display:flex;
-    align-items:flex-start;
-    background-color:lightgray;
-    padding:
+.selected-id {
+  display: flex;
+  align-items: flex-start;
+  background-color: lightgray;
+  padding: 4px;
+}
+
+.selected-data {
+  display: flex;
+  gap: 8px;
+  background-color: #dfe8e8;
 }

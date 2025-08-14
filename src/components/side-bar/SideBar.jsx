@@ -4,7 +4,7 @@ import { CiSearch } from "react-icons/ci";
 import { electrolyzer_ids } from "../../data.js";
 import Idbox from "../id-box/Idbox";
 
-const SideBar = ({handleIdSelect}) => {
+const SideBar = ({ selectedId, handleIdSelect }) => {
   const [searchedId, setSearchId] = useState("");
   const [ids, setIds] = useState(electrolyzer_ids);
   const handleChange = (e) => {
@@ -22,13 +22,16 @@ const SideBar = ({handleIdSelect}) => {
           placeholder="Search Electrolyte ID"
         />
       </div>
-      <div className='result-ids'>
+      <div className="result-ids">
         {ids
-          ?.filter((id) =>
-            id.toString().includes(searchedId.toString())
-          )
+          ?.filter((id) => id.toString().includes(searchedId.toString()))
           .map((id, index) => (
-            <Idbox onClick={()=>handleIdSelect(id)} key={index} id={id} />
+            <Idbox
+              handleIdSelect={handleIdSelect}
+              selectedId={selectedId}
+              key={index}
+              id={id}
+            />
           ))}
       </div>
     </div>
