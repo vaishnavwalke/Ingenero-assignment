@@ -9,7 +9,6 @@ const PartsList = ({
   isReadyToAssemble,
   selectedChecklist = [],
 }) => {
-  useEffect(() => {}, [selectedChecklist]);
   const handleCheckboxChange = (id) => {
     if (selectedPartIds?.includes(id)) {
       setSelectedPartIds((prev) => prev.filter((item) => item !== id));
@@ -29,7 +28,6 @@ const PartsList = ({
     }
   };
 
-  console.log(selectedChecklist, "selectedChecklist");
   return (
     <div className="part-list">
       <div className="heading">
