@@ -20,10 +20,10 @@ const Popup = ({
         <div>
           Update Status of Element Part ID{" "}
           {selectedPartIds?.map((item) => (
-            <span key={item}>{`${item}`}</span>
+            <span key={item}>{`${item}, `}</span>
           ))}{" "}
-          to {isReadyToRepair && "Ready to Repair"}{" "}
-          {isReadyToAssemble && "Ready for Assembly"}
+          to {selection === 'repair' && "Ready to Repair"}{" "}
+          {selection === 'assemble' && "Ready for Assembly"}    
         </div>
         <div className="footer">
           <button

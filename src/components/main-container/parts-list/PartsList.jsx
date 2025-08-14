@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./PartsList.css";
 import { element_ids } from "../../../data.js";
 import Idbox from "../../id-box/Idbox";
-const selectedChecklistPartsList = ({
+const PartsList = ({
   selectedPartIds,
   setSelectedPartIds,
   isReadyToRepair,
   isReadyToAssemble,
-  selectedChecklist,
+  selectedChecklist = [],
 }) => {
+  useEffect(() => {}, [selectedChecklist]);
   const handleCheckboxChange = (id) => {
     if (selectedPartIds?.includes(id)) {
       setSelectedPartIds((prev) => prev.filter((item) => item !== id));
