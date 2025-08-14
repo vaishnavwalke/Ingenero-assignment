@@ -1,0 +1,33 @@
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checklist-top {
+  display: flex;
+  gap: 2rem;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.selection-item {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-wrap: wrap;
+  background-color: white;
+  border-radius: 1rem;
+  border: 1px solid black;
+  padding: 8px;
+  cursor: pointer;
+}
+.selected {
+  border: 1px solid red;
+  background-color: lightpink;
+  color: black;
+}

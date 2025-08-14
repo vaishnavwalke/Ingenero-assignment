@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px;
+  padding: 16px;
   background-color: white;
   width: 100%;
 }
@@ -10,4 +10,46 @@
 .text {
   background-color: lightgray;
   padding: 4px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.comments-box {
+  display: flex;
+  gap: 1rem;
+  padding: 8px;
+  background-color: lightgray;
+  width: 100%;
+}
+
+.ids {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.commentslist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.submit {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn {
+  padding: 4px 16px;
+  background-color: lightgray;
+}
+.send {
+  background-color: black;
+  color: white;
 }

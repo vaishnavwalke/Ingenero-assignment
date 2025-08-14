@@ -1,7 +1,7 @@
 .part-list {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 40%;
   gap: 16px;
   padding: 8px;
 }
@@ -29,4 +29,22 @@
 
 .checkbox {
   accent-color: red;
+}
+
+.notify {
+  padding: 4px;
+  border-radius: 16px;
+  color: white;
+  width:auto;
+}
+
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+
+.isdisable {
+  visibility: hidden    ;
 }

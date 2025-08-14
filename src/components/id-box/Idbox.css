@@ -5,11 +5,15 @@
   background-color: lightgray;
   border-radius: 4px;
   padding: 8px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .selected {
   background-color: red;
   border: 1px dashed black;
   color: white;
+}
+.disabled {
+  background-color: lightcyan;
+  cursor: no-drop;
 }

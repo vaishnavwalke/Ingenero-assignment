@@ -2,7 +2,13 @@ import React from "react";
 import "./PartsList.css";
 import { element_ids } from "../../../data.js";
 import Idbox from "../../id-box/Idbox";
-const PartsList = ({ selectedPartIds, setSelectedPartIds }) => {
+const selectedChecklistPartsList = ({
+  selectedPartIds,
+  setSelectedPartIds,
+  isReadyToRepair,
+  isReadyToAssemble,
+  selectedChecklist,
+}) => {
   const handleCheckboxChange = (id) => {
     if (selectedPartIds?.includes(id)) {
       setSelectedPartIds((prev) => prev.filter((item) => item !== id));
@@ -21,6 +27,8 @@ const PartsList = ({ selectedPartIds, setSelectedPartIds }) => {
       setSelectedPartIds(allIds);
     }
   };
+
+  console.log(selectedChecklist, "selectedChecklist");
   return (
     <div className="part-list">
       <div className="heading">
@@ -40,13 +48,31 @@ const PartsList = ({ selectedPartIds, setSelectedPartIds }) => {
                   type="checkbox"
                   checked={selectedPartIds?.includes(item.id) ? true : false}
                   onChange={() => handleCheckboxChange(item.id)}
-                  className="checkbox"
+                  className={`checkbox ${
+                    selectedPartIds?.includes(item.id) &&
+                    (isReadyToRepair || isReadyToAssemble)
+                      ? "isdisable"
+                      : ""
+                  }`}
+                  disabled={
+                    selectedPartIds?.includes(item.id) &&
+                    (isReadyToRepair || isReadyToAssemble)
+                  }
                 />
                 <Idbox
                   id={item?.id}
                   handleIdSelect={() => {}}
                   isSelected={selectedPartIds?.includes(item.id)}
+                  isDisabled={isReadyToRepair || isReadyToAssemble}
                 />
+                {isReadyToRepair && selectedPartIds?.includes(item.id) && (
+                  <div className="notify red">
+                    Ready for Repair {` ${selectedChecklist?.length || ""}`}
+                  </div>
+                )}
+                {isReadyToAssemble && selectedPartIds?.includes(item.id) && (
+                  <div className="notify green">Ready for Assembly</div>
+                )}
               </div>
             </div>
           );
