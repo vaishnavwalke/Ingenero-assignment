@@ -7,6 +7,7 @@ const Popup = ({
   isReadyToAssemble,
   isReadyToRepair,
   selectedPartIds,
+  selection,
 }) => {
   return (
     <div className="popup-container">
@@ -22,8 +23,8 @@ const Popup = ({
           {selectedPartIds?.map((item) => (
             <span key={item}>{`${item}, `}</span>
           ))}{" "}
-          to {selection === 'repair' && "Ready to Repair"}{" "}
-          {selection === 'assemble' && "Ready for Assembly"}    
+          to {selection === "repair" && "Ready to Repair"}{" "}
+          {selection === "assemble" && "Ready for Assembly"}
         </div>
         <div className="footer">
           <button

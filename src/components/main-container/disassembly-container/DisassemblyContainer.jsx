@@ -142,6 +142,7 @@ const DisassemblyContainer = ({
           setShowPopup={setShowPopup}
           isReadyToRepair={isReadyToRepair}
           isReadyToAssemble={isReadyToAssemble}
+          selection={selection}
         />
       )}
     </div>
